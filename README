@@ -1,1 +1,10 @@
-Hello World!
+Small HTTP server created to test against nmap scans. Requires root privileges to bind socket to port 80.
+The purpose of creating this was to see if spoofed HTTP headers gets matched with nmap signatures of other popular HTTP servers. Hence in turn, getting a disguised http service name in nmap scan results.
+
+WWW root directory: /usr/local/www
+
+usage: user@localhost:/home/user#sudo ./webserver_v03
+
+The server binds itself on port 80 (HTTP) and listens for incoming connections. On getting a valid HTTP request, it sends back the corresponding HTML page or else the notfound.htm page is sent.
+
+Press Ctrl+C to terminate
